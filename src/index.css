@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Montserrat", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-teal: #70C7D9;
+  --color-brand-dark: #0A0D10;
+  --color-brand-surface: #12161B;
+  --color-brand-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-white antialiased;
+    font-family: "Inter", sans-serif;
+  }
+  
+  h1, h2, h3 {
+    @apply tracking-tight uppercase;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(to bottom, rgba(10, 13, 16, 0.4) 0%, rgba(10, 13, 16, 0.9) 100%);
+}
+
+.markdown-body {
+  @apply text-zinc-300 leading-relaxed;
+}
+
+.markdown-body h3 {
+  @apply text-white font-bold mb-3 mt-6 first:mt-0 uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.markdown-body p {
+  @apply mb-4 last:mb-0;
+}
+
+.markdown-body strong {
+  @apply text-brand-teal font-semibold;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside space-y-2 mb-4;
+}
